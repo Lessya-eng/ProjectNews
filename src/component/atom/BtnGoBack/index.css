@@ -1,0 +1,13 @@
+.go-back-btn {
+    width: 166px;
+    background-color: #393939;
+    margin: 15px 0px;
+    cursor: pointer;
+}
+.go-back-btn h4 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-size: 25px;
+    color: #ffffff;
+    margin: 10px 0px;
+}

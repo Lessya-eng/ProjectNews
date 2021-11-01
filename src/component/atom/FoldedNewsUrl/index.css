@@ -1,0 +1,12 @@
+.folded-news-url {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 5px 23px;
+    color: #413f3f;
+}
