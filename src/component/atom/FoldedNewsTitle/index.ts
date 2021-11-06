@@ -1,0 +1,1 @@
+export { FoldedNewsTitle } from "./FoldedNewsTitle"

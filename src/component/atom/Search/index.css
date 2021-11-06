@@ -1,0 +1,17 @@
+.search {
+    width: 200px;
+    height: 60px;
+    margin-right: 32px;
+    background: #393939;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    color: cornsilk;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+.search::placeholder {
+    background: url(../../picture/search.svg) no-repeat;
+    background-position: 100px 23px;
+    text-indent: 26px;
+}

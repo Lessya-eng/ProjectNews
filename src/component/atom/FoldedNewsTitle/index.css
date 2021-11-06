@@ -1,0 +1,12 @@
+.folded-news-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4f4f4f;
+    margin: 10px 23px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
