@@ -1,0 +1,12 @@
+.news-article-slice-summary {
+    font-family: "Avant Garde", "Avantgarde", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #9e9797;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-left: 5px;
+}

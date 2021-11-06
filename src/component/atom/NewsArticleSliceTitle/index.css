@@ -1,0 +1,12 @@
+.news-article-slice-title {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(209, 209, 217);
+    font-family: "Avant Garde", "Avantgarde", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
+}

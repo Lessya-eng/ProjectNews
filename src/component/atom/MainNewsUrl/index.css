@@ -1,0 +1,11 @@
+.main-news-url {
+    font-family: "Avant Garde", "Avantgarde", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #6b6868;
+    margin: 15px 0px;
+}
+.main-news-url:hover {
+    color: rgb(240, 69, 69);
+}

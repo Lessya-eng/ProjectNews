@@ -2,10 +2,14 @@ import * as React from "react";
 import { memo } from "react";
 import "./index.css";
 
-export const Search = memo(() => {
+interface ISearch {
+    onChangeHandler: (text: string) => void;
+}
+
+export const Search = memo(({ onChangeHandler }: ISearch) => {
     return (
         <div>
-            <input className="search" type="search" placeholder="Search for" />
+            <input className="search" type="search" placeholder="Search for" onChange={(e) => onChangeHandler(e.target.value)} />
         </div>
     )
 })

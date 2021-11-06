@@ -1,1 +1,0 @@
-export { FoldedArticle } from "./FoldedArticle"

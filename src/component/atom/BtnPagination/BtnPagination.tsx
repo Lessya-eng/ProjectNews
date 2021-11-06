@@ -13,7 +13,6 @@ export const BtnPagination = memo(({ onClick, text, btnClassName }: IPaginationB
         <button type="submit"
             className={`btn-pagination ${btnClassName}`}
             onClick={onClick}
-            {...btnClassName}
         >
             <h4>{text}</h4>
         </button>

@@ -9,8 +9,6 @@ function* getArticlesSaga() {
         const data: { data: any } = yield call(() =>
             ArticlesService.getArticles()
         );
-        /* console.log(data); */
-
         yield put(setArticlesAction(data.data))
     } catch (e) {
         yield put(
@@ -23,7 +21,6 @@ function* getArticlesSaga() {
 function* getSelectedArticleSaga({ payload: id }: Action<number>) {
     console.log(id)
     try {
-
         const data: { data: any } = yield call(() =>
             ArticlesService.getSelectedArticle(id)
         );
@@ -44,8 +41,6 @@ function* getBlogSaga() {
         const data: { data: any } = yield call(() =>
             BlogsService.getBlogs()
         );
-        console.log({ data });
-
         yield put(setBlogsAction(data.data))
     } catch (e) {
         yield put(
@@ -76,8 +71,6 @@ function* getReportSaga() {
         const data: { data: any } = yield call(() =>
             ReportsService.getReports()
         );
-        console.log({ data });
-
         yield put(setReportsAction(data.data))
     } catch (e) {
         yield put(
@@ -102,31 +95,140 @@ function* getSelectedReportSaga({ payload: id }: Action<number>) {
     }
 }
 
-function* getPaginationSaga({ payload: skipSize }: Action<number>) {
+function* getPaginationArticleSaga({ payload: skipSize }: Action<number>) {
     console.log(skipSize);
-
     try {
         const data: { data: any } = yield call(() =>
             ArticlesService.getPaginationArticle(skipSize)
         );
         yield put(setArticlesAction(data.data));
     } catch (e: any) {
-        yield put(
-            setNewsErrorAction(
-                "Sorry! Selected report not found."
-            )
-        );
+
     }
 }
 
+function* getPaginationBlogSaga({ payload: skipSize }: Action<number>) {
+    console.log(skipSize);
+
+    try {
+        const data: { data: any } = yield call(() =>
+            BlogsService.getPaginationBlog(skipSize)
+        );
+        yield put(setBlogsAction(data.data));
+    } catch (e: any) {
+
+    }
+}
+
+function* getPaginationReportSaga({ payload: skipSize }: Action<number>) {
+    try {
+        const data: { data: any } = yield call(() =>
+            ReportsService.getPaginationReport(skipSize)
+        );
+        yield put(setReportsAction(data.data));
+    } catch (e: any) {
+
+    }
+}
+
+function* getSortedArticleSaga({ payload: value }: Action<string>) {
+    console.log(value);
+    try {
+        const data: { data: any } = yield call(() =>
+            ArticlesService.getSortedArticle(value)
+        );
+        yield put(setArticlesAction(data.data));
+    } catch (e: any) {
+        console.log({ e });
+    }
+}
+
+function* getSortedBlogSaga({ payload: value }: Action<string>) {
+    console.log(value);
+    try {
+        const data: { data: any } = yield call(() =>
+            BlogsService.getSortedBlog(value)
+        );
+        yield put(setBlogsAction(data.data));
+    } catch (e: any) {
+        console.log({ e });
+    }
+}
+
+function* getSortedReportSaga({ payload: value }: Action<string>) {
+    console.log(value);
+    try {
+        const data: { data: any } = yield call(() =>
+            ReportsService.getSortedReport(value)
+        );
+        yield put(setReportsAction(data.data));
+    } catch (e: any) {
+        console.log({ e });
+    }
+}
+
+function* getSearchArticleSaga({ payload: search }: Action<string>) {
+    console.log(search);
+    try {
+        const data: { data: any } = yield call(() =>
+            ArticlesService.getSearchArticle(search)
+        );
+        yield put(setArticlesAction(data.data));
+    } catch (e: any) {
+        console.log({ e });
+        /* 
+                yield put(
+        
+                    setNewsErrorAction(
+                        "Sorry! Selected sort not found."
+                    )
+                ); */
+    }
+}
+
+function* getSearchBlogSaga({ payload: search }: Action<string>) {
+    console.log(search);
+    try {
+        const data: { data: any } = yield call(() =>
+            BlogsService.getSearchBlog(search)
+        );
+        yield put(setBlogsAction(data.data));
+    } catch (e: any) {
+        console.log({ e });
+    }
+}
+
+function* getSearchReportSaga({ payload: search }: Action<string>) {
+    console.log(search);
+    try {
+        const data: { data: any } = yield call(() =>
+            ReportsService.getSearchReport(search)
+        );
+        yield put(setReportsAction(data.data));
+    } catch (e: any) {
+        console.log({ e });
+    }
+}
 
 export function* newsSaga() {
     yield takeEvery(ACTIONS.GET_ARTICLES_ACTION, getArticlesSaga);
-    yield takeEvery(ACTIONS.GET_SELECTED_ARTICLES_ACTION, getSelectedArticleSaga);
     yield takeEvery(ACTIONS.GET_BLOGS_ACTION, getBlogSaga);
-    yield takeEvery(ACTIONS.GET_SELECTED_BLOGS_ACTION, getSelectedBlogSaga);
     yield takeEvery(ACTIONS.GET_REPORTS_ACTION, getReportSaga);
+
+    yield takeEvery(ACTIONS.GET_SELECTED_ARTICLES_ACTION, getSelectedArticleSaga);
+    yield takeEvery(ACTIONS.GET_SELECTED_BLOGS_ACTION, getSelectedBlogSaga);
     yield takeEvery(ACTIONS.GET_SELECTED_REPORTS_ACTION, getSelectedReportSaga);
-    yield takeEvery(ACTIONS.GET_PAGINATED_ARTICLE_ACTION, getPaginationSaga);
+
+    yield takeEvery(ACTIONS.GET_PAGINATED_ARTICLE_ACTION, getPaginationArticleSaga);
+    yield takeEvery(ACTIONS.GET_PAGINATED_BLOG_ACTION, getPaginationBlogSaga);
+    yield takeEvery(ACTIONS.GET_PAGINATED_REPORT_ACTION, getPaginationReportSaga);
+
+    yield takeEvery(ACTIONS.GET_SORTED_ARTICLE_ACTION, getSortedArticleSaga);
+    yield takeEvery(ACTIONS.GET_SORTED_BLOG_ACTION, getSortedBlogSaga);
+    yield takeEvery(ACTIONS.GET_SORTED_REPORT_ACTION, getSortedReportSaga);
+
+    yield takeEvery(ACTIONS.GET_SEARCH_ARTICLE_ACTION, getSearchArticleSaga);
+    yield takeEvery(ACTIONS.GET_SEARCH_BLOG_ACTION, getSearchBlogSaga);
+    yield takeEvery(ACTIONS.GET_SEARCH_REPORT_ACTION, getSearchReportSaga);
 }
 
