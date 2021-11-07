@@ -10,3 +10,8 @@
     font-size: 20px;
     box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
 }
+@media (min-width: 751px) and (max-width: 1115px) {
+    .news-article-slice-title {
+        height: 30%;
+    }
+}

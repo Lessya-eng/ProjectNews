@@ -16,7 +16,7 @@ export const NavigationWithoutSearch = memo(() => {
     }
     return (
         <nav className="app-nav">
-            <div className="nav-wrapper" id="nav">
+            <div className="nav-wrap" id="nav">
                 <div className="nav-left">
                     <div className="nav-link"><a href="/">Home</a></div>
                     <div className="nav-link"><a href="/articles">Articles</a></div>
