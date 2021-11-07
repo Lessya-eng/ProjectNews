@@ -1,0 +1,1 @@
+export { NewsArticleSliceSummary } from "./NewsArticleSliceSummary"

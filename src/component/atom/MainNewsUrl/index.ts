@@ -1,0 +1,1 @@
+export { MainNewsUrl } from "./MainNewsUrl"

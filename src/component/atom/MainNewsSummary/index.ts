@@ -1,0 +1,1 @@
+export { MainNewsSummary } from "./MainNewsSummary"

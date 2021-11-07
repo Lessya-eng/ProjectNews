@@ -1,0 +1,1 @@
+export { MainNewsImg } from "./MainNewsImg"

@@ -1,12 +1,12 @@
 .folded-news-url {
-    font-family: "Raleway";
+    font-family: "Avant Garde", "Avantgarde", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     -webkit-line-clamp: 1;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    margin: 5px 23px;
+    margin: 0px 23px;
     color: #413f3f;
 }

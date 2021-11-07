@@ -4,11 +4,9 @@ import { useHistory, useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { getNewsState } from "../core/selectors/newsSelector";
 import { getSelectedArticleAction } from "../core";
-import { MainArticle } from "../component/molecula/MainArticle";
+import { MainNews, NavigationWithoutSearch } from "../component/molecules";
 import { HeaderTemplate } from "../template/HeaderTemplate";
 import { BtnGoBack } from "../component/atom/BtnGoBack";
-
-
 
 export const SelectedArticle = memo(() => {
     const { id } = useParams() as any;
@@ -25,22 +23,20 @@ export const SelectedArticle = memo(() => {
     }
 
     return (
-
         <HeaderTemplate
             headerBlock={
-                <>
-
-                    <div className="folded-article-for-link">
-                        <div className="folded-article-for-btn">
+                <div>
+                    <NavigationWithoutSearch />
+                    <div className="folded-news-for-link">
+                        <div className="folded-news-for-btn">
                             {selectedArticle && (
-                                <MainArticle key={selectedArticle.id} {...selectedArticle} />
+                                <MainNews key={selectedArticle.id} {...selectedArticle} />
                             )}
                             <BtnGoBack onClick={backToArticle} />
                         </div>
                     </div>
-                </>
+                </div>
             }
         />
-
     )
 });

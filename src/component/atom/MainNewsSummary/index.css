@@ -1,0 +1,12 @@
+.main-news-summary {
+    font-family: "Avant Garde", "Avantgarde", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    color: #6b6868;
+    margin: 25px 23px 5px 45px;
+    -webkit-line-clamp: 8;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

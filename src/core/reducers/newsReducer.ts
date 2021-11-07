@@ -1,4 +1,4 @@
-import { IReport, IBlog, IArticle } from '../../type/index';
+import { INews } from '../../type/index';
 import { ActionType, createReducer } from "typesafe-actions";
 import {
     setArticlesAction,
@@ -9,16 +9,18 @@ import {
     setSelectedBlogAction,
     setNewsErrorAction,
     setPaginatedArticleAction,
+    setPaginatedBlogAction,
+    setPaginatedReportAction,
 }
     from "../actions";
 
 export interface INewsState {
-    articles: IArticle[] | null;
-    reports: IReport[] | null;
-    blogs: IBlog[] | null;
-    selectedArticle: IArticle[] | null;
-    selectedReport: IReport[] | null;
-    selectedBlog: IBlog[] | null;
+    articles: INews[] | null;
+    reports: INews[] | null;
+    blogs: INews[] | null;
+    selectedArticle: INews[] | null;
+    selectedReport: INews[] | null;
+    selectedBlog: INews[] | null;
     newsError: string | null;
     skipSize: number;
 }
@@ -42,6 +44,8 @@ const actions = {
     setSelectedBlogAction,
     setNewsErrorAction,
     setPaginatedArticleAction,
+    setPaginatedBlogAction,
+    setPaginatedReportAction,
 };
 
 export const newsReducer = createReducer<INewsState, ActionType<typeof actions>>(
@@ -77,4 +81,13 @@ export const newsReducer = createReducer<INewsState, ActionType<typeof actions>>
     .handleAction(setPaginatedArticleAction, (state, { payload: skipSize }) => ({
         ...state,
         skipSize,
+    }))
+    .handleAction(setPaginatedBlogAction, (state, { payload: skipSize }) => ({
+        ...state,
+        skipSize,
+    }))
+    .handleAction(setPaginatedReportAction, (state, { payload: skipSize }) => ({
+        ...state,
+        skipSize,
     }));
+

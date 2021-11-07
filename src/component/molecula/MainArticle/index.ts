@@ -1,1 +1,0 @@
-export { MainArticle } from "./MainArticle"

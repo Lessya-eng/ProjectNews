@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { memo } from "react";
 import "./index.css";
@@ -9,6 +8,6 @@ export interface IFoldedNewsImg {
 
 export const FoldedNewsImg = memo(({ img }: IFoldedNewsImg) => {
     return (
-        <img className="folded-news-img" src={img} alt="News" width={100} height={100} />
+        <img className="folded-news-img" src={img} alt="Sorry, picture not found" width={400} height={170} />
     )
 })

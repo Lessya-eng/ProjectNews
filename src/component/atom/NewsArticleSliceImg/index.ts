@@ -1,0 +1,1 @@
+export { NewsArticleSliceImg } from "./NewsArticleSliceImg"

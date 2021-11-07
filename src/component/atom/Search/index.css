@@ -1,14 +1,12 @@
 .search {
-    width: 200px;
-    height: 60px;
     margin-right: 32px;
     background: #393939;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
     color: cornsilk;
-    font-family: "Oswald";
+    font-family: "Avant Garde", "Avantgarde", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 15px;
 }
 .search::placeholder {
     background: url(../../picture/search.svg) no-repeat;
