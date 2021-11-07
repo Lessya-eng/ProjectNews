@@ -10,9 +10,17 @@ interface INavigation {
 }
 
 export const Navigation = memo(({ onChangeHandler, onChange }: INavigation) => {
+    function openMobile() {
+        const navMenu = document.querySelector(".app-nav");
+        const mobileBtn = document.querySelector(".mobile-menu-btn");
+        const navList = document.querySelector(".nav-wrapper");
+        navMenu?.classList.toggle("mobile-active");
+        mobileBtn?.classList.toggle("mobile-active");
+        navList?.classList.toggle("mobile-active");
+    }
     return (
-        <nav>
-            <div className="nav-wrapper">
+        <nav className="app-nav">
+            <div className="nav-wrapper" id="nav">
                 <div className="nav-left">
                     <div className="nav-link"><a href="/">Home</a></div>
                     <div className="nav-link"><a href="/articles">Articles</a></div>
@@ -24,6 +32,10 @@ export const Navigation = memo(({ onChangeHandler, onChange }: INavigation) => {
                     <Search onChangeHandler={onChangeHandler} />
                 </div>
             </div>
+            <button className="mobile-menu-btn" onClick={openMobile}>
+                <span></span>
+            </button>
+
         </nav>
     )
 })

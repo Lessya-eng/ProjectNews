@@ -14,3 +14,8 @@
     display: flex;
     justify-content: flex-start;
 }
+@media (max-width: 750px) {
+    .main-news-wrapper {
+        border: none;
+    }
+}

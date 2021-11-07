@@ -18,3 +18,13 @@
 .previous-btn {
     display: none;
 }
+
+@media (max-width: 750px) {
+    .btn-pagination h4 {
+        font-size: 15px;
+        margin: 8px 0px;
+    }
+    .btn-pagination {
+        width: 125px;
+    }
+}
