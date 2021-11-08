@@ -4,14 +4,14 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { BtnGoBack } from "../component/atom/BtnGoBack";
 import { Navigation } from "../component/molecules";
-import { NavigationWithoutSearch } from "../component/molecules/NavigationWithoutSearch";
 import logo from "../component/picture/logo.svg";
 import { getSearchArticleAction, getSortedArticleAction } from "../core";
 
 export const NotFound = memo(() => {
     const history = useHistory();
     function goBack() {
-        window.history.back();
+        console.log("hello");
+        window.history.go(-2);
     }
     const sortByField = (e: any) => {
     }
@@ -25,7 +25,6 @@ export const NotFound = memo(() => {
                     <img src={logo} />
                 </div>
             </div>
-            {/* <NavigationWithoutSearch /> */}
             <Navigation onChangeHandler={searchByTitle} onChange={sortByField} />
             <div className="header-block-for-news">
                 <main className="main-post-home">

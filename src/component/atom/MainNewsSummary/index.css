@@ -5,8 +5,15 @@
     font-size: 22px;
     color: #6b6868;
     margin: 25px 23px 5px 45px;
-    -webkit-line-clamp: 8;
+    -webkit-line-clamp: 10;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+@media (max-width: 750px) {
+    .main-news-summary {
+        font-size: 19px;
+        color: #6b6868;
+        margin: 10px 5px;
+    }
 }

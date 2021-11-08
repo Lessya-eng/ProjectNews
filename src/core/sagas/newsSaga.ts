@@ -96,7 +96,6 @@ function* getSelectedReportSaga({ payload: id }: Action<number>) {
 }
 
 function* getPaginationArticleSaga({ payload: skipSize }: Action<number>) {
-    console.log(skipSize);
     try {
         const data: { data: any } = yield call(() =>
             ArticlesService.getPaginationArticle(skipSize)
@@ -108,8 +107,6 @@ function* getPaginationArticleSaga({ payload: skipSize }: Action<number>) {
 }
 
 function* getPaginationBlogSaga({ payload: skipSize }: Action<number>) {
-    console.log(skipSize);
-
     try {
         const data: { data: any } = yield call(() =>
             BlogsService.getPaginationBlog(skipSize)
@@ -132,14 +129,12 @@ function* getPaginationReportSaga({ payload: skipSize }: Action<number>) {
 }
 
 function* getSortedArticleSaga({ payload: value }: Action<string>) {
-    console.log(value);
     try {
         const data: { data: any } = yield call(() =>
             ArticlesService.getSortedArticle(value)
         );
         yield put(setArticlesAction(data.data));
     } catch (e: any) {
-        console.log({ e });
     }
 }
 
@@ -151,7 +146,6 @@ function* getSortedBlogSaga({ payload: value }: Action<string>) {
         );
         yield put(setBlogsAction(data.data));
     } catch (e: any) {
-        console.log({ e });
     }
 }
 
@@ -163,7 +157,6 @@ function* getSortedReportSaga({ payload: value }: Action<string>) {
         );
         yield put(setReportsAction(data.data));
     } catch (e: any) {
-        console.log({ e });
     }
 }
 
@@ -175,14 +168,6 @@ function* getSearchArticleSaga({ payload: search }: Action<string>) {
         );
         yield put(setArticlesAction(data.data));
     } catch (e: any) {
-        console.log({ e });
-        /* 
-                yield put(
-        
-                    setNewsErrorAction(
-                        "Sorry! Selected sort not found."
-                    )
-                ); */
     }
 }
 
@@ -194,7 +179,6 @@ function* getSearchBlogSaga({ payload: search }: Action<string>) {
         );
         yield put(setBlogsAction(data.data));
     } catch (e: any) {
-        console.log({ e });
     }
 }
 
@@ -206,7 +190,6 @@ function* getSearchReportSaga({ payload: search }: Action<string>) {
         );
         yield put(setReportsAction(data.data));
     } catch (e: any) {
-        console.log({ e });
     }
 }
 

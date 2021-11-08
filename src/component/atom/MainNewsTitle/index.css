@@ -6,3 +6,10 @@
     color: #4f4f4f;
     margin: 30px 33px;
 }
+@media (max-width: 750px) {
+    .main-news-title {
+        font-size: 23px;
+        color: #4f4f4f;
+        margin: 30px 5px;
+    }
+}
