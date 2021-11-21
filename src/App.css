@@ -96,7 +96,7 @@
 }
 .scroll-up {
   position: fixed;
-  bottom: 28px;
+  bottom: 86px;
   right: 28px;
   z-index: 3;
 }
