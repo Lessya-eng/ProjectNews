@@ -23,7 +23,7 @@
         inset rgba(255, 255, 255, 0.5) 5px 5px 8px 5px, 1px 1px 1px rgba(255, 255, 255, 0.2),
         -2px -2px 5px rgba(0, 0, 0, 0.5);
 }
-.show-more-btn h4 {
+.show-more-btn p {
     font-family: "Avant Garde", "Avantgarde", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
     font-style: normal;
     font-size: 20px;

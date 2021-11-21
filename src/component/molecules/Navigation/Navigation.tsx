@@ -1,8 +1,9 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import { memo } from "react";
 import "./index.css";
 import { Search } from "../../atom/Search";
 import { Sort } from "../../atom/Sort";
+import { Link } from "react-router-dom";
 
 interface INavigation {
     onChangeHandler: (text: string) => void;
@@ -10,32 +11,27 @@ interface INavigation {
 }
 
 export const Navigation = memo(({ onChangeHandler, onChange }: INavigation) => {
-    function openMobile() {
-        const navMenu = document.querySelector(".app-nav");
-        const mobileBtn = document.querySelector(".mobile-menu-btn");
-        const navList = document.querySelector(".nav-wrapper");
-        navMenu?.classList.toggle("mobile-active");
-        mobileBtn?.classList.toggle("mobile-active");
-        navList?.classList.toggle("mobile-active");
-    }
+
     return (
-        <nav className="app-nav">
-            <div className="nav-wrapper" id="nav">
-                <div className="nav-left">
-                    <div className="nav-link"><a href="/">Home</a></div>
-                    <div className="nav-link"><a href="/articles">Articles</a></div>
-                    <div className="nav-link"><a href="/blogs">Blogs</a></div>
-                    <div className="nav-link"><a href="/reports">Reports</a></div>
+        <div className="nav-wrapper">
+            <input type="checkbox" id="check-menu" />
+            <label htmlFor="check-menu"></label>
+            <div className="burger-line first"></div>
+            <div className="burger-line second"></div>
+            <div className="burger-line third"></div>
+            <div className="burger-line fourth"></div>
+            <nav className="main-menu">
+                <div className="nav-left-part">
+                    <Link className="for-link link" to={"/"}>Home</Link>
+                    <Link className="for-link link" to={"/articles"}>Articles</Link>
+                    <Link className="for-link link" to={"/blogs"}>Blogs</Link>
+                    <Link className="for-link link" to={"/reports"}>Reports</Link>
                 </div>
-                <div className="nav-right">
+                <div className="for-link link nav-right-part">
                     <Sort onChange={onChange} />
                     <Search onChangeHandler={onChangeHandler} />
                 </div>
-            </div>
-            <button className="mobile-menu-btn" onClick={openMobile}>
-                <span></span>
-            </button>
-
-        </nav>
+            </nav>
+        </div>
     )
 })

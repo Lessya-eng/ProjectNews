@@ -2,6 +2,7 @@
   max-width: 100%;
   margin: 40px 135px;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 .logo-wrapper {
   margin-bottom: 39px;
@@ -14,7 +15,6 @@
   display: flex;
   align-items: center;
 }
-
 .main-block-wrapper {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -48,7 +48,7 @@
 }
 .news-article-splice {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 25px;
   gap: 25px;
   margin-top: 40px;
@@ -61,7 +61,7 @@
 .folded-news-for-link {
   margin-top: 25px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 25px;
   gap: 25px;
   margin-bottom: 26px;
@@ -90,15 +90,38 @@
   text-align: center;
   font-weight: bold;
 }
+/* Button scroll-up */
+.fas .fa-angle-up::before {
+  content: "\f106";
+}
+.scroll-up {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 3;
+}
+.scroll-up a {
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  background: #151414;
+  display: block;
+  border-radius: 2px;
+}
+.scroll-up a span {
+  color: #f7f0f0;
+  font-size: 30px;
+  line-height: 42px;
+  cursor: pointer;
+}
 /* Not Found  */
 .main-block-wrapper p {
   border: 4px double rgba(255, 255, 255, 0.25);
   border-width: 4px 0;
   display: flex;
   justify-content: center;
-  padding: 250px 0px;
   position: absolute;
-  top: 18%;
+  top: 56%;
   left: 50%;
   width: 40em;
   margin: 0 0 0 -20em;
@@ -180,5 +203,15 @@
   .folded-news-for-link {
     margin-bottom: 16px;
     justify-items: center;
+  }
+  .main-block-wrapper span {
+    font: 200 2em/1 "Oswald", sans-serif;
+  }
+  .main-block-wrapper p {
+    padding: 260px 0px;
+  }
+  .not-found-text {
+    font-size: 23px;
+    margin-bottom: 25px;
   }
 }

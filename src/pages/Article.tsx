@@ -13,22 +13,22 @@ import logo from "../component/picture/logo.svg";
 export const Article = memo(() => {
     const dispatch = useDispatch();
     const history = useHistory();
-    const { articles, skipSize } = useSelector(getNewsState);
+    const { articles, skipSizeArticle } = useSelector(getNewsState);
 
     useEffect(() => {
         dispatch(getArticlesAction());
     }, [dispatch]);
 
     const nextArticlePage = () => {
-        dispatch(setPaginatedArticleAction(skipSize + 9));
+        dispatch(setPaginatedArticleAction(skipSizeArticle + 9));
     };
     const prevArticlePage = () => {
-        dispatch(setPaginatedArticleAction(skipSize - 9));
+        dispatch(setPaginatedArticleAction(skipSizeArticle - 9));
     };
 
     useEffect(() => {
-        dispatch(getPaginationArticleAction(skipSize));
-    }, [dispatch, skipSize]);
+        dispatch(getPaginationArticleAction(skipSizeArticle));
+    }, [dispatch, skipSizeArticle]);
 
     function checkPage(currPage: any, direction: string) {
         const prevBtn = document.querySelector(".previous-btn");
@@ -82,15 +82,18 @@ export const Article = memo(() => {
                 <div className="btn-pagination-on-news-page-center">
                     <div className="btn-pagination-on-news-page">
                         <BtnPagination onClick={() => {
-                            checkPage(skipSize, "prev");
+                            checkPage(skipSizeArticle, "prev");
                             prevArticlePage();
                         }} text={"Previous"}
                             btnClassName={"previous-btn"}
                         />
                         <BtnPagination onClick={() => {
-                            checkPage(skipSize, "next");
+                            checkPage(skipSizeArticle, "next");
                             nextArticlePage();
                         }} text={"Next"} btnClassName={"next-btn"} />
+                    </div>
+                    <div className="scroll-up">
+                        <a href="#"><span className="fas fa-angle-up"></span></a>
                     </div>
                 </div>
             </div>

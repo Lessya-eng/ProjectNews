@@ -12,7 +12,7 @@ export const BtnShowMore = memo(({ onClick }: IBtnShowMore) => {
         <button type="submit"
             className="show-more-btn"
             onClick={() => onClick()} >
-            <h4>Show More</h4>
+            <p>Show More</p>
         </button>
     )
 });

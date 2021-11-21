@@ -8,11 +8,6 @@ import logo from "../component/picture/logo.svg";
 import { getSearchArticleAction, getSortedArticleAction } from "../core";
 
 export const NotFound = memo(() => {
-    const history = useHistory();
-    function goBack() {
-        console.log("hello");
-        window.history.go(-2);
-    }
     const sortByField = (e: any) => {
     }
 
@@ -38,7 +33,6 @@ export const NotFound = memo(() => {
                 </main>
                 <p className="not-found-text"> Sorry, your request failed, please try again</p>
             </div>
-            <BtnGoBack onClick={goBack} />
         </div>
     )
 })

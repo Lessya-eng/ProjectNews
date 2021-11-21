@@ -23,7 +23,7 @@ ReportsService.setCredentials({
 });
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/ProjectNews">
     <Provider store={store}>
       <App />
     </Provider>

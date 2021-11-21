@@ -9,8 +9,8 @@ class ArticlesAPIService extends BaseService {
     public async getSelectedArticle(id: any) {
         return this.get(`${id}`);
     }
-    public async getPaginationArticle(skipSize: number) {
-        return this.get(`?_limit=9&_start=${skipSize}`);
+    public async getPaginationArticle(skipSizeArticle: number) {
+        return this.get(`?_limit=9&_start=${skipSizeArticle}`);
     }
 
     public async getSortedArticle(value: string) {

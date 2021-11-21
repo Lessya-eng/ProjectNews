@@ -10,8 +10,8 @@ class BlogsAPIService extends BaseService {
     public async getSelectedBlog(id: number) {
         return this.get(`${id}`);
     }
-    public async getPaginationBlog(skipSize: number) {
-        return this.get(`?_limit=9&_start=${skipSize}`);
+    public async getPaginationBlog(skipSizeBlog: number) {
+        return this.get(`?_limit=9&_start=${skipSizeBlog}`);
     }
 
     public async getSortedBlog(value: string) {

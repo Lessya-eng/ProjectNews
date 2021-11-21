@@ -22,7 +22,9 @@ export interface INewsState {
     selectedReport: INews[] | null;
     selectedBlog: INews[] | null;
     newsError: string | null;
-    skipSize: number;
+    skipSizeArticle: number;
+    skipSizeBlog: number;
+    skipSizeReport: number;
 }
 
 const defaultState: INewsState = {
@@ -33,7 +35,9 @@ const defaultState: INewsState = {
     selectedReport: null,
     selectedBlog: null,
     newsError: null,
-    skipSize: 0,
+    skipSizeArticle: 0,
+    skipSizeBlog: 0,
+    skipSizeReport: 0,
 }
 const actions = {
     setArticlesAction,
@@ -78,16 +82,16 @@ export const newsReducer = createReducer<INewsState, ActionType<typeof actions>>
         ...state,
         newsError,
     }))
-    .handleAction(setPaginatedArticleAction, (state, { payload: skipSize }) => ({
+    .handleAction(setPaginatedArticleAction, (state, { payload: skipSizeArticle }) => ({
         ...state,
-        skipSize,
+        skipSizeArticle,
     }))
-    .handleAction(setPaginatedBlogAction, (state, { payload: skipSize }) => ({
+    .handleAction(setPaginatedBlogAction, (state, { payload: skipSizeBlog }) => ({
         ...state,
-        skipSize,
+        skipSizeBlog,
     }))
-    .handleAction(setPaginatedReportAction, (state, { payload: skipSize }) => ({
+    .handleAction(setPaginatedReportAction, (state, { payload: skipSizeReport }) => ({
         ...state,
-        skipSize,
+        skipSizeReport,
     }));
 

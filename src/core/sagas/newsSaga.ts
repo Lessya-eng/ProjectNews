@@ -139,7 +139,6 @@ function* getSortedArticleSaga({ payload: value }: Action<string>) {
 }
 
 function* getSortedBlogSaga({ payload: value }: Action<string>) {
-    console.log(value);
     try {
         const data: { data: any } = yield call(() =>
             BlogsService.getSortedBlog(value)
@@ -150,7 +149,6 @@ function* getSortedBlogSaga({ payload: value }: Action<string>) {
 }
 
 function* getSortedReportSaga({ payload: value }: Action<string>) {
-    console.log(value);
     try {
         const data: { data: any } = yield call(() =>
             ReportsService.getSortedReport(value)
@@ -161,7 +159,6 @@ function* getSortedReportSaga({ payload: value }: Action<string>) {
 }
 
 function* getSearchArticleSaga({ payload: search }: Action<string>) {
-    console.log(search);
     try {
         const data: { data: any } = yield call(() =>
             ArticlesService.getSearchArticle(search)
@@ -172,7 +169,6 @@ function* getSearchArticleSaga({ payload: search }: Action<string>) {
 }
 
 function* getSearchBlogSaga({ payload: search }: Action<string>) {
-    console.log(search);
     try {
         const data: { data: any } = yield call(() =>
             BlogsService.getSearchBlog(search)
@@ -183,7 +179,6 @@ function* getSearchBlogSaga({ payload: search }: Action<string>) {
 }
 
 function* getSearchReportSaga({ payload: search }: Action<string>) {
-    console.log(search);
     try {
         const data: { data: any } = yield call(() =>
             ReportsService.getSearchReport(search)
