@@ -12,21 +12,21 @@ import logo from "../component/picture/logo.svg";
 export const Blog = memo(() => {
     const dispatch = useDispatch();
     const history = useHistory();
-    const { blogs, skipSize } = useSelector(getNewsState);
+    const { blogs, skipSizeBlog } = useSelector(getNewsState);
 
     useEffect(() => {
         dispatch(getBlogsAction());
     }, [dispatch]);
 
     const nextBlogPage = () => {
-        dispatch(setPaginatedBlogAction(skipSize + 9));
+        dispatch(setPaginatedBlogAction(skipSizeBlog + 9));
     };
     const prevBlogPage = () => {
-        dispatch(setPaginatedBlogAction(skipSize - 9));
+        dispatch(setPaginatedBlogAction(skipSizeBlog - 9));
     };
     useEffect(() => {
-        dispatch(getPaginationBlogAction(skipSize));
-    }, [dispatch, skipSize]);
+        dispatch(getPaginationBlogAction(skipSizeBlog));
+    }, [dispatch, skipSizeBlog]);
 
     function checkPage(currPage: any, direction: string) {
         const prevBtn = document.querySelector(".previous-btn");
@@ -80,15 +80,18 @@ export const Blog = memo(() => {
                 <div className="btn-pagination-on-news-page-center">
                     <div className="btn-pagination-on-news-page">
                         <BtnPagination onClick={() => {
-                            checkPage(skipSize, "prev");
+                            checkPage(skipSizeBlog, "prev");
                             prevBlogPage();
                         }} text={"Previous"}
                             btnClassName={"previous-btn"}
                         />
                         <BtnPagination onClick={() => {
-                            checkPage(skipSize, "next");
+                            checkPage(skipSizeBlog, "next");
                             nextBlogPage();
                         }} text={"Next"} btnClassName={"next-btn"} />
+                    </div>
+                    <div className="scroll-up">
+                        <a href="#"><span className="fas fa-angle-up"></span></a>
                     </div>
                 </div>
             </div>

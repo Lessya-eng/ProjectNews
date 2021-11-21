@@ -9,6 +9,6 @@ export interface IMainNewsUrl {
 
 export const MainNewsUrl = memo(({ url }: IMainNewsUrl) => {
     return (
-        <a className="main-news-url" href={url}>{"<Click me>"}</a>
+        <a className="main-news-url" href={url} target="_blank">{"<Click me>"}</a>
     )
 })

@@ -12,7 +12,7 @@ export const BtnGoBack = memo(({ onClick }: IAddBtn) => {
         <button type="submit"
             className="go-back-btn"
             onClick={() => onClick()}>
-            <h4>Go Back</h4>
+            <p>Go Back</p>
         </button>
     )
 });

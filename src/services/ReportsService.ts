@@ -9,8 +9,8 @@ class ReportsAPIService extends BaseService {
     public async getSelectedReport(id: number) {
         return this.get(`${id}`);
     }
-    public async getPaginationReport(skipSize: number) {
-        return this.get(`?_limit=9&_start=${skipSize}`);
+    public async getPaginationReport(skipSizeReport: number) {
+        return this.get(`?_limit=9&_start=${skipSizeReport}`);
     }
 
     public async getSortedReport(value: string) {

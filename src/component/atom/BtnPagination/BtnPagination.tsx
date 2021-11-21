@@ -14,7 +14,7 @@ export const BtnPagination = memo(({ onClick, text, btnClassName }: IPaginationB
             className={`btn-pagination ${btnClassName}`}
             onClick={onClick}
         >
-            <h4>{text}</h4>
+            <p>{text}</p>
         </button>
     )
 });
