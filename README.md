@@ -1,7 +1,7 @@
 # NewsCast React App 
 
-#### Link to the project in gh-pages [NewsCast] (https://lessya-eng.github.io/ProjectNews/).
-#### Link to the API [NewsCast] (https://api.spaceflightnewsapi.net/v3/documentation).
+#### Link to the project in gh-pages [NewsCast](https://lessya-eng.github.io/ProjectNews/).
+#### Link to the API [NewsCast](https://api.spaceflightnewsapi.net/v3/documentation).
 
 ## Description
 
