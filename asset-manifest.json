@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ProjectNews/static/css/main.2d502991.chunk.css",
+    "main.css": "/ProjectNews/static/css/main.62b1c006.chunk.css",
     "main.js": "/ProjectNews/static/js/main.8eecc09e.chunk.js",
     "main.js.map": "/ProjectNews/static/js/main.8eecc09e.chunk.js.map",
     "runtime-main.js": "/ProjectNews/static/js/runtime-main.8cb3fcc1.js",
@@ -10,7 +10,7 @@
     "static/js/3.6a0c47fc.chunk.js": "/ProjectNews/static/js/3.6a0c47fc.chunk.js",
     "static/js/3.6a0c47fc.chunk.js.map": "/ProjectNews/static/js/3.6a0c47fc.chunk.js.map",
     "index.html": "/ProjectNews/index.html",
-    "static/css/main.2d502991.chunk.css.map": "/ProjectNews/static/css/main.2d502991.chunk.css.map",
+    "static/css/main.62b1c006.chunk.css.map": "/ProjectNews/static/css/main.62b1c006.chunk.css.map",
     "static/js/2.7e6b9e6b.chunk.js.LICENSE.txt": "/ProjectNews/static/js/2.7e6b9e6b.chunk.js.LICENSE.txt",
     "static/media/logo.092c1276.svg": "/ProjectNews/static/media/logo.092c1276.svg",
     "static/media/index.css": "/ProjectNews/static/media/search.878937f4.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.8cb3fcc1.js",
     "static/js/2.7e6b9e6b.chunk.js",
-    "static/css/main.2d502991.chunk.css",
+    "static/css/main.62b1c006.chunk.css",
     "static/js/main.8eecc09e.chunk.js"
   ]
 }
