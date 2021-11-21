@@ -29,5 +29,6 @@
     }
     .btn-pagination {
         width: 125px;
+        margin: 40px 40px 20px;
     }
 }
